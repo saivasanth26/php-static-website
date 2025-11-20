@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bookalbum
+  name: phpbook
   labels:
-    app: bookalbum
+    app: phpbook
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: bookalbum
+      app: phpbook
   template:
     metadata:
       labels:
-        app: bookalbum
+        app: phpbook
     spec:
       containers:
-      - name: bookalbum
-        image: sreedocker123/bookmoviealbum:latest
+      - name: phpbook
+        image: dvasanth26/phpstatic:latest
         ports:
         - containerPort: 80
